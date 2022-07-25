@@ -1,0 +1,147 @@
+*{
+ margin:0;
+ padding:0;
+ box-sizing: border-box; 
+ font-family: 'Montserrat', sans-serif;   
+}
+
+:root{
+    --cream:hsl(30, 38%, 92%);
+    --dark_cyan:hsl(158, 36%, 37%);
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+  width:100%;
+  min-height:100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+}
+
+.card-container{
+    width:555px;
+    height:420px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 13px;
+    flex-wrap: wrap;
+    border-radius: 13px;
+    overflow:hidden;
+}
+
+.image-container,.content-container{
+    width:50%; 
+}
+.desktop-image{
+    width:100%;
+    height:100%;   
+}
+.mobile-image{
+    display: none;
+}
+
+.content-container{
+    padding:1.5em;
+    background-color: var(--White);
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-top:.45em;
+    line-height:1;
+    color:var(--Very_dark_blue);
+}
+h2{
+    font-size:14px;
+    font-weight: 500;
+    letter-spacing: .3em;
+    color: var(--Dark_grayish_blue);
+}
+p{
+    font-size: .85rem;
+    font-weight:500;
+    margin:1.45em 0 1.45em 0;
+    line-height: 1.5;
+    color: var(--Dark_grayish_blue);
+}
+.price-container{
+    display: flex;
+    align-items: center;
+}
+
+.discount-price{
+    font-size: 1.95rem;
+    font-weight: 700;
+    color:var(--dark_cyan);
+    font-family: 'Fraunces', serif;
+}
+
+.actual-price{
+    font-size: .85rem;
+    font-weight: 500;
+    text-decoration: line-through;
+    margin-left: 1.5em;
+    color:var(--Dark_grayish_blue)
+}
+
+.btn{
+    width:100%;
+    font-size:.8rem;
+    font-weight: 500;
+    padding:1em;
+    margin-top: 1.4em;
+    border-radius: 7px;
+    border:none;
+    outline:none;
+    background-color: var(--dark_cyan);
+    color:var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+ background-color:hsl(158, 48%, 19%);
+ cursor:pointer;
+}
+.btn img{
+    margin-right:.6em;
+}
+
+@media screen and (max-width:590px){
+   
+    .card-container{
+        width:340px;
+        height:70%;
+        margin:1em;
+        flex-direction: column;
+    }
+
+    .image-container,.content-container{
+        width:100%;
+   }
+
+   .image-container{
+    height:35%;
+   }
+   .content-container{
+    height:65%;
+   }
+    .desktop-image{
+        display: none;
+    }
+
+    .mobile-image{
+        width:100%;
+        height:100%;
+        display: block;
+    }
+    
+}
+
